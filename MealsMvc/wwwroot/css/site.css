@@ -1,0 +1,271 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+/* plus minus */
+span {
+    cursor: pointer;
+}
+
+.minus, .plus {
+    width: 20px;
+    height: 20px;
+    background: #f2f2f2;
+    border-radius: 4px;
+    //padding: 1px 1px 1px 1px;
+    border: 1px solid #ddd;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.plusminusinput {
+    height: 28px;
+    width: 28px;
+    text-align: center;
+    padding-top: 1px;
+    font-size: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* plus minus end */
+
+.totalservings {
+    width: 20.4px;
+    height: 20.4px;
+    line-height: 19px;
+    background: #df4661;
+    display: inline;
+    margin-left: 26px;
+    border-radius: 50%;
+    font-family: Overpass,Arial,Tahoma,sans-serif;
+    font-size: .75rem;
+    color: #fff;
+    vertical-align: middle;
+    text-align: center;
+    display: block;
+    padding-top: 1px;
+}
+
+.custom-overlay {
+    background-image: linear-gradient(transparent 0,#5cb8b2 0);
+    background-repeat: repeat-x;
+    background-size: 2px 7px;
+    display: inline;
+    padding-right: 5px;
+    font-size: 70px;
+    font-size: 4.375rem;
+    line-height: 80px;
+    background-position: 0 72%;
+    letter-spacing: -.8px;
+}
+
+.custom-label {
+    text-transform: uppercase;
+    font-family: font-family: Overpass,Arial,Tahoma,sans-serif;
+    font-size: 1.25rem;
+}
+
+.text-location {
+    display: inline-block;
+    line-height: normal;
+    max-width: 480px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.tbsmall {
+    color: #b6b6b6;
+    display: block;
+    font-size: 70%;
+}
+
+.ingredients-header {
+    color: black;
+    font-size: 36px;
+    border-bottom: 0;
+}
+
+.grocery-list-component-item {
+    font-size: 13px;
+    color: black;
+    font-family: Arial;
+    font-weight: normal;
+    border: 0;
+}
+
+.tr-odd {
+    background-color: #f2f2f2;
+}
+
+span {
+    cursor: pointer;
+}
+
+.card {
+    border-radius: 4px;
+    border: none;
+    background: #fff;
+    /*box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+    transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+    padding: 14px 80px 18px 36px;*/
+    cursor: pointer;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 10vw;
+    object-fit: cover;
+}
+
+.card-img-bot {
+    width: 100%;
+    height: 10vw;
+    object-fit: cover;
+}
+
+a .navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+.navbar-tacobell {
+    background-color: #dedede;
+    border-bottom: 1px solid #fff;
+    border-top: 1px solid #fff;
+    color: black;
+    display: inline-block;
+    padding: 25px 0;
+    transform: skew(0deg, -10deg);
+    width: 100%;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #df4661;
+    border: 0px;
+}
+
+.btn {
+    font-family: Overpass,Arial,Tahoma,sans-serif;
+    font-weight: 600;
+    border-radius: 0;
+}
+
+.btn-primary:hover {
+    background-color: #d43551;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 14px;
+    font-family: Overpass,Arial,Tahoma,sans-serif;
+    //color: #5cb8b2;
+    color: #000;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+h3 {
+    text-transform: uppercase;
+    font-size: 1.75rem;
+}
+
+h4, .h4 {
+    text-transform: uppercase;
+    font-size: 1.125rem;
+}
+
+.title {
+    /*font-size: 28px;
+    color: #002940;*/
+    color: black;
+    font-size: 1.125rem;
+    font-family: Overpass,Arial,Tahoma,sans-serif;
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+}
+
+.title:hover {
+    color: #d43551;
+    text-decoration: none;
+}
+
+.recipe-title {
+    font-size: 1.125rem;
+}
+
+.recipe-additional-info {
+    font-size: 1.125rem;
+    font-family: Overpass,Arial,Tahoma,sans-serif;
+    color: #828282;
+}
+
+body, button, input, select, textarea {
+    font-size: 14px;
+    //color: #002940;
+    color: black;
+    font-family: Overpass,Arial,Tahoma,sans-serif;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
+}

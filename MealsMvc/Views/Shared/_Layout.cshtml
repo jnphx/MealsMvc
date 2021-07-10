@@ -1,0 +1,230 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Sample</title>
+
+    <link rel="stylesheet" href="~/lib/simple-sidebar/css/simple-sidebar.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@800&display=swap" rel="stylesheet">
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet"
+              href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-
+              property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-
+              version="true" />
+    </environment>
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+
+        #wrapper {
+            padding-left: 0;
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+        }
+
+        #sidebar-wrapper {
+            z-index: 1000;
+            position: fixed;
+            left: 0;
+            width: 124px;
+            height: 100%;
+            overflow-y: auto;
+            background: white;
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+        }
+
+        #page-content-wrapper {
+            width: 100%;
+            background-color: white;
+            position: absolute;
+            padding-top: 60px;
+            padding-left: 124px;
+        }
+        /* Sidebar Styles */
+        .sidebar-nav {
+            position: relative;
+            top: 0;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+            /*
+        .sidebar-nav li {
+            text-indent: 20px;
+            line-height: 40px;
+        }*/
+            .sidebar-nav li a {
+                display: block;
+                text-decoration: none;
+                color: black;
+                font-family: "Lato","Arial Black",Arial,Helvetica,sans-serif;
+                letter-spacing: -.2px;
+                font-weight: 900;
+                font-size: 18px;
+                text-align: center;
+                text-transform: uppercase;
+            }
+
+                .sidebar-nav li a:hover {
+                    text-decoration: none;
+                    color: white;
+                    background: black;
+                }
+
+                .sidebar-nav li a:active, .sidebar-nav li a:focus {
+                    text-decoration: none;
+                }
+
+            .sidebar-nav > .sidebar-brand {
+                height: 65px;
+                font-size: 18px;
+                line-height: 60px;
+            }
+
+                .sidebar-nav > .sidebar-brand a {
+                    color: #999999;
+                }
+
+                    .sidebar-nav > .sidebar-brand a:hover {
+                        color: #fff;
+                        background: none;
+                    }
+
+        .logo img {
+            height: 78px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+        /* Dropdown Button */
+        .dropbtn {
+            background-color: #04AA6D;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+        }
+        /* The container <div> - needed to position the dropdown content */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        /* Dropdown Content (Hidden by Default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+            /* Links inside the dropdown */
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+                /* Change color of dropdown links on hover */
+                .dropdown-content a:hover {
+                    background-color: #ddd;
+                }
+        /* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        /* Change the background color of the dropdown button when the dropdown content is shown */
+        .dropdown:hover .dropbtn {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+<body>
+    <!--<nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">home</a>
+                <a asp-area="" asp-controller="Home" asp-action="About" class="navbar-brand">About</a>
+            </div>
+        </div>
+    </nav>-->
+    <div id="wrapper" class="toggled">
+        <div id="sidebar-wrapper">
+            <a class="logo">
+                <img src="~/images/Cooking.png" title="Cooking" alt="Cooking">
+            </a>
+            <ul class="sidebar-nav" style="margin-top:15px;">
+                <li>
+                    <a asp-controller="Home" asp-action="Index" class="navbar-tacobell">Plan</a>
+                </li>
+                <li>
+                    <a asp-controller="Home" asp-action="GroceryShopping" class="navbar-tacobell">Groceries</a>
+                </li>
+                <li>
+                    <a asp-controller="Home" asp-action="WeekendPrep" class="navbar-tacobell">Prep</a>
+                </li>
+                <li>
+                    <a asp-controller="Recipes" asp-action="Index" class="navbar-tacobell">Recipes</a>
+                </li>
+
+            </ul>
+        </div>
+
+        <div id="page-content-wrapper">
+            <div class="container-fluid" style="padding-left: 0px; background-color:#f2f2f2">
+                @RenderBody()
+            </div>
+            <footer></footer>
+        </div>
+    </div>
+
+    <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous">
+        </script>
+        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn &&
+     window.jQuery.fn.modal"
+                crossorigin="anonymous">
+        </script>
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+    </environment>
+    <script>
+        $(document).ready(function () {
+            $("#menu-toggle").click(function (e) {
+                e.preventDefault();
+                $("#wrapper").toggleClass("toggled");
+            });
+        });
+    </script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
